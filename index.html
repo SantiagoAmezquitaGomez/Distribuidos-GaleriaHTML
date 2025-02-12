@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Fotográfica</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Galería</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="text-center py-5 bg-dark text-white">
+        <h1>Sistemas Distribuidos Galeria</h1>
+        <p>Santiago Amezquita Gomez</p>
+    </header>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <script>
+                for (let i = 1; i <= 9; i++) {
+                    document.write(`
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="assets/images/photo${i}.jpg" class="card-img-top" alt="Imagen ${i}">
+                                <div class="card-body">
+                                    <h5 class="card-title">Imagen Destacada ${i}</h5>
+                                    <p class="card-text">Nueva imagen de galeria</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-primary">Ver Detalles</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compartir</button>
+                                        </div>
+                                        <small class="text-muted">Hace ${i * 2} minutos</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </div>
+    
+    <footer class="text-center py-4 bg-light mt-5">
+        <p>&copy; 2025 Galería | Santiago Amezquita </p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <!--ayuda a reducir el peso del script y mejorar la velocidad de carga de la página.-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
